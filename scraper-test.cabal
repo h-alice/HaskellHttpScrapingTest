@@ -34,12 +34,20 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , html-conduit
+    , http-conduit
+    , text
+    , wreq
+    , xml-conduit
   default-language: Haskell2010
 
 executable scraper-test-exe
   main-is: Main.hs
   other-modules:
+      XmlScraper
       Paths_scraper_test
   autogen-modules:
       Paths_scraper_test
@@ -47,8 +55,15 @@ executable scraper-test-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , html-conduit
+    , http-conduit
     , scraper-test
+    , text
+    , wreq
+    , xml-conduit
   default-language: Haskell2010
 
 test-suite scraper-test-test
@@ -62,6 +77,13 @@ test-suite scraper-test-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , html-conduit
+    , http-conduit
     , scraper-test
+    , text
+    , wreq
+    , xml-conduit
   default-language: Haskell2010
