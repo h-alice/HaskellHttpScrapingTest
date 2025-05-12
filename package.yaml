@@ -28,6 +28,9 @@ dependencies:
 - xml-conduit
 - text
 - bytestring
+- HandsomeSoup
+- hxt
+- lens
 
 
 ghc-options:

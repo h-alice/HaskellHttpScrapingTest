@@ -34,11 +34,14 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      aeson
+      HandsomeSoup
+    , aeson
     , base >=4.7 && <5
     , bytestring
     , html-conduit
     , http-conduit
+    , hxt
+    , lens
     , text
     , wreq
     , xml-conduit
@@ -47,6 +50,7 @@ library
 executable scraper-test-exe
   main-is: Main.hs
   other-modules:
+      HandSomeScraper
       XmlScraper
       Paths_scraper_test
   autogen-modules:
@@ -55,11 +59,14 @@ executable scraper-test-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      aeson
+      HandsomeSoup
+    , aeson
     , base >=4.7 && <5
     , bytestring
     , html-conduit
     , http-conduit
+    , hxt
+    , lens
     , scraper-test
     , text
     , wreq
@@ -77,11 +84,14 @@ test-suite scraper-test-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      aeson
+      HandsomeSoup
+    , aeson
     , base >=4.7 && <5
     , bytestring
     , html-conduit
     , http-conduit
+    , hxt
+    , lens
     , scraper-test
     , text
     , wreq

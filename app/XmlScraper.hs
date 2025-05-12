@@ -1,5 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
+-- Reference: https://www.yesodweb.com/book/xml
+
 module XmlScraper (fetchURL) where
 
 import qualified Data.Text as T  -- For text manipulation
